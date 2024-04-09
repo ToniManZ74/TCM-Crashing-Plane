@@ -16,6 +16,9 @@ public class AddImpulse2D : MonoBehaviour
     }
     void Update()
     {
+        if (_impulse >= 6)
+            _impulse = 5;
+
         if (Input.anyKeyDown)
             _rigidbody2D.AddForce(_direction.normalized * _impulse, ForceMode2D.Impulse);
     }
